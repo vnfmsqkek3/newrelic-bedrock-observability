@@ -9,6 +9,11 @@ jobs:
   build-and-publish:
     name: Build and Publish Python Package
     runs-on: ubuntu-latest
+    
+    # OIDC 토큰 인증을 위한 권한 추가
+    permissions:
+      id-token: write
+      contents: read
 
     steps:
     - name: Check out repository
